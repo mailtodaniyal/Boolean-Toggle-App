@@ -9,6 +9,21 @@
   <button onclick="toggleMessage()">Click Here to see hidden message By Afaq Ahmad</button>
   <p id="message">By Daniyal Full stack Web developer</p>
 
-<script src="/main.js"></script>
+<script>
+  var showMessage = false;
+
+function toggleMessage() {
+  showMessage = !showMessage;
+  updateMessageVisibility();
+}
+function updateMessageVisibility() {
+  var messageElement = document.getElementById("message");
+  if (showMessage) {
+    messageElement.style.display = "block";
+  } else {
+    messageElement.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
